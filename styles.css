@@ -1,0 +1,86 @@
+/*
+Prototype colors
+*** Backgrounds ***
+  main background - #1B1924
+  publish button - #28A9F1
+  input boxes - #444059
+  endorsement boxes - #FFF
+*** Fonts ***
+  Title text - #FFF
+  Input font - #8F8F8F
+  Button font - #04131C
+  Endorsement box font - #1B1924
+
+  font-family: 'Inter', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #FFF;
+  background: #1B1924;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px dotted aqua;
+}
+
+img {
+  width: 120px;
+  border: 1px dotted aqua;
+
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  border: 1px dotted aqua;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+input {
+  color: #c5c5c5;
+  background: #444059;
+  /* font-size: 1.2rem; */
+  align-items: center;
+  border: 1px dotted aqua;
+}
+
+#endorsement-input {
+  border: 1px dotted aqua;
+  
+}
+
+.name-box-wrapper input {
+  border: 1px dotted red;
+}
+
+#publish-btn {
+  font-family: 'Josefin Sans', sans-serif;
+  background: #28A9F1;
+}
+
+.endorsement {
+  background: #FFF;
+  color: #1B1924;
+  width:88%;
+  border: 2px dotted pink;  
+}
+
+.to-from {
+  font-weight: 700;
+}
+
