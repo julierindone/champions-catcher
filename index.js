@@ -20,7 +20,7 @@ let toBoxEl = document.getElementById("to-box")
 
 onValue(endorsementListInDB, function(snapshot) {
   // start with a newly empty list in the UI:
-  clearListInUI()
+  endorsementListEl.innerHTML = null
 
   // snapshot is an object holding thw list of items, so we need to convert it to an array so we can access its content.
   let endorsementsArray = Object.entries(snapshot.val())
@@ -58,9 +58,4 @@ function clearAllInput() {
   endorsementInputEl.value = null
   fromBoxEl.value = null
   toBoxEl.value = null
-}
-
-// we need to use this before loading the list-builder; otgerwise it adds
-function clearListInUI() {
-  endorsementListEl.innerHTML = null
 }
