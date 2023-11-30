@@ -16,68 +16,111 @@ Prototype colors
   */
 
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   color: #FFF;
   background: #1B1924;
+  /* temp bg color so i can see the sizing */
+  margin: 0;
+  text-align: center;
+}
+  background: #1B1924;
   margin: 0;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 82%;
+  padding-bottom: 1rem;
   margin: 0 auto;
-  border: 1px dotted aqua;
 }
 
 img {
-  width: 120px;
-  border: 1px dotted aqua;
-
+  width: 6rem;
+  padding-top: 2.5rem;
 }
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.95rem;
   text-align: center;
-  border: 1px dotted aqua;
+  margin: 1rem 0;
 }
 
 h2 {
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.45rem;
+  margin-top: 1.25rem;
+  margin-bottom: .8rem;
 }
 
-input {
+.inputs input,
+#endorsement-input,
+#publish-btn {
   color: #c5c5c5;
   background: #444059;
-  /* font-size: 1.2rem; */
-  align-items: center;
-  border: 1px dotted aqua;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
 }
 
 #endorsement-input {
-  border: 1px dotted aqua;
-  
+  color: #c5c5c5;
+  background: #444059;
+  font-family: inherit;
+  line-height: 1.35;
+  height: 9.5rem;
+  box-sizing: border-box;
+  padding: .9rem 1.2rem;
 }
 
-.name-box-wrapper input {
-  border: 1px dotted red;
+div.name-box-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: .6rem;
+  margin: .48rem 0 0 0;
+  height: 3rem;
+}
+
+.name-box-wrapper > * {
+  font-size: .98rem;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
 }
 
 #publish-btn {
   font-family: 'Josefin Sans', sans-serif;
+  color: #04131C;
+  font-size: 1.5rem;
+  font-weight: 700;
   background: #28A9F1;
+  margin: .5rem 0 0 0;
+  border: none;
+  font-family: inherit;
+  height: 4.2rem;
 }
 
-.endorsement {
+ul#endorsement-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#endorsement-list li {
   background: #FFF;
   color: #1B1924;
-  width:88%;
-  border: 2px dotted pink;  
+  text-align: left;
+  line-height: 1.3;
+  padding: .6rem .85rem;
+  margin: .8rem 0;
+}
+
+#endorsement-list p {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  margin: 0;
 }
 
 .to-from {

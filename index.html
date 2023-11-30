@@ -22,34 +22,23 @@
     <img alt="Freddie Mercury" src="freddie.png" />
 
     <h1>We are the Champions</h1>
+    <div class="inputs">
+      <textarea id="endorsement-input" placeholder="Write your endorsement here"></textarea>
+      <div class="name-box-wrapper">
+        <input id="from-box" type="text" placeholder="From">
+        <input id="to-box" type="text" placeholder="To">
+      </div>
+      <button id="publish-btn">Publish</button>
 
-    <input id="endorsement-input" type="text" placeholder="Write your endorsement here">
-    <div class="name-box-wrapper">
-      <input id="from-box" type="text" placeholder="From">
-      <input id="to-box" type="text" placeholder="To">
     </div>
-    <button id="publish-btn">Publish</button>
+    <h2>&#9734; Endorsements &#9734;</h2>
+    <ul id="endorsement-list">
+      <!-- creating li's inside of js -->
+    </ul>
+  </div>
 
-    <h2>Endorsements</h2>
-    <!-- sample boxes; will be generated w javascript -->
-    <div class="endorsement">
-      <p class="to-from">To Freddie</p>
-      <p>I like your music almost as much as the Smiths. Thanks for making it.</p>
-      <p class="to-from">From Julie</p>
-    </div>
-    <div class="endorsement">
-      <p class="to-from">To Freddie</p>
-      <p>My music is better than yours. I'm sorry, but it's true.</p>
-      <p class="to-from">From Morrissey</p>
-    </div>
-    <div class="endorsement">
-      <p class="to-from">To Freddie</p>
-      <p>Don't listen to Morrissey - he's an absolute wanker.</p>
-      <p class="to-from">From Johnny Marr</p>
-    </div>
   </div>
-  </div>
-  <script src="index.js" async defer></script>
+  <script src="index.js" type="module"></script>
 </body>
 
 </html>
