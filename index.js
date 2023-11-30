@@ -29,7 +29,7 @@ onValue(endorsementListInDB, function(snapshot) {
   for (let i = 0; i < endorsementsArray.length; i++) {
     // console.log(`endorsementsArray[${i}] is ${(endorsementsArray[i])[1]}`)
     let currentItem = endorsementsArray[i]
-    appendEndorsementToList(currentItem)
+    rebuildEndorsementListFromDb(currentItem)
   }
 })
 
@@ -42,7 +42,7 @@ publishBtnEl.addEventListener("click", function () {
 })
 
 // this rebuilds the list each time the db changes
-function appendEndorsementToList(item) {
+function rebuildEndorsementListFromDb(item) {
   let itemId = item[0]
   let itemValue = item[1]
 
