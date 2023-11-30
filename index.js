@@ -9,12 +9,9 @@ const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const endorsementListInDB = ref(database, "endorsements")
 
-let endorsementInputEl = document.getElementById("endorsement-input")
 const publishBtnEl = document.getElementById("publish-btn")
+let endorsementInputEl = document.getElementById("endorsement-input")
 let endorsementListEl = document.getElementById("endorsement-list")
-// is endorsementBoxEl needed? I think it's actually going to be a class.  
-// let endorsementBoxEl = document.getElementById("endorsement-box")
-// Challenge items; save for later
 let fromBoxEl = document.getElementById("from-box")
 let toBoxEl = document.getElementById("to-box")
 
@@ -22,12 +19,11 @@ onValue(endorsementListInDB, function(snapshot) {
   // start with a newly empty list in the UI:
   endorsementListEl.innerHTML = null
 
-  // snapshot is an object holding thw list of items, so we need to convert it to an array so we can access its content.
+  // snapshot is an object holding the list of items; we need to convert it to an array so we can access its content.
   let endorsementsArray = Object.entries(snapshot.val())
   
   //create list of endorsements in the UI
   for (let i = 0; i < endorsementsArray.length; i++) {
-    // console.log(`endorsementsArray[${i}] is ${(endorsementsArray[i])[1]}`)
     let currentItem = endorsementsArray[i]
     rebuildEndorsementListFromDb(currentItem)
   }
@@ -45,12 +41,10 @@ publishBtnEl.addEventListener("click", function () {
 function rebuildEndorsementListFromDb(item) {
   let itemId = item[0]
   let itemValue = item[1]
-
   let newEl = document.createElement("li")
 
   newEl.textContent = `${itemValue}`
   endorsementListEl.append(newEl)
-
 }
 
 // clears input fields upon publishing endorsement
