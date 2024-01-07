@@ -1,79 +1,81 @@
-/*
-Prototype colors
-*** Backgrounds ***
-  main background - #1B1924
-  publish button - #28A9F1
-  input boxes - #444059
-  endorsement boxes - #FFF
-*** Fonts ***
-  Title text - #FFF
-  Input font - #8F8F8F
-  Button font - #04131C
-  Endorsement box font - #1B1924
+:root {
+  --background: #1e1c27;
+  --input-background: #444059;
+  --endorsements-background: #f3f2f2;
+  --accent-blue: #28A9F1;
+  --light-text: #f3f2f2;
+  --dark-text: #04131C;
 
-  font-family: 'Inter', sans-serif;
-  font-family: 'Josefin Sans', sans-serif;
-  */
+  --heading-font: 'Josefin Sans', sans-serif;
+  --content-font: 'Inter', sans-serif;
+
+  --text-padding: .6rem .8rem;
+  --border-radius: 8px;
+}
 
 html {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: #FFF;
-  background: #1B1924;
-  /* temp bg color so i can see the sizing */
-  margin: 0;
-  text-align: center;
-}
-  background: #1B1924;
+  font-family: var(--content-font);
+  color: var(--endorsements-background);
+  background: var(--background);
   margin: 0;
 }
 
 .container {
-  width: 82%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 86%;
+  max-width: 410px;
   padding-bottom: 1rem;
   margin: 0 auto;
 }
 
 img {
-  width: 6rem;
-  padding-top: 2.5rem;
+  width: 5.5rem;
+  padding-top: 2rem;
 }
 
 h1 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: var(--heading-font);
   font-size: 1.95rem;
   text-align: center;
   margin: 1rem 0;
 }
 
 h2 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: var(--heading-font);
   font-size: 1.45rem;
   margin-top: 1.25rem;
-  margin-bottom: .8rem;
+  margin-bottom: 0;
 }
 
-.inputs input,
-#endorsement-input,
-#publish-btn {
-  color: #c5c5c5;
-  background: #444059;
+.inputs {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  border-radius: 8px;
-  border: none;
 }
 
-#endorsement-input {
-  color: #c5c5c5;
-  background: #444059;
-  font-family: inherit;
+.inputs textarea:focus {
+  outline: 1px dotted var(--accent-blue)
+}
+
+.inputs * {
+  font-size: .95rem;
+  color: var(--light-text);
   line-height: 1.35;
+  border-radius: var(--border-radius);
+  border: none;
+  background: var(--input-background);
+}
+
+#message-input {
   height: 9.5rem;
   box-sizing: border-box;
-  padding: .9rem 1.2rem;
+  padding: var(--text-padding);
 }
 
 div.name-box-wrapper {
@@ -85,36 +87,35 @@ div.name-box-wrapper {
 }
 
 .name-box-wrapper > * {
-  font-size: .98rem;
   text-align: center;
   flex: 1;
   min-width: 0;
 }
 
 #publish-btn {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #04131C;
-  font-size: 1.5rem;
+  font-family: var(--heading-font);
+  color: var(--dark-text);
+  font-size: 1.4rem;
   font-weight: 700;
-  background: #28A9F1;
-  margin: .5rem 0 0 0;
+  background: var(--accent-blue);
   border: none;
-  font-family: inherit;
-  height: 4.2rem;
+  margin: .75rem 0 0 0;
+  padding: 1.1rem 1rem .75rem 1rem;
 }
 
 ul#endorsement-list {
   list-style-type: none;
   padding: 0;
+  margin-top: 0;
 }
 
 #endorsement-list li {
   background: #FFF;
-  color: #1B1924;
+  color: var(--dark-text);
   text-align: left;
   line-height: 1.3;
-  padding: .6rem .85rem;
-  margin: .8rem 0;
+  padding: var(--text-padding);
+  margin: 1rem 0;
 }
 
 #endorsement-list p {
@@ -127,3 +128,15 @@ ul#endorsement-list {
   font-weight: 700;
 }
 
+@media (min-width: 320px) and (max-width:359px) {
+  html {
+    font-size: 15px;
+  }
+  .container {
+    width: 92%;
+  }
+
+  #endorsement-list li {
+    font-size: 1.05rem;
+  }
+}
